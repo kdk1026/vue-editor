@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <div ref="editor"></div>
-        <button @click="onConfirmConsole">콘솔 확인</button>
-        <button @click="onSetContent">내용 넣기</button>
-    </div>
+    <div ref="editor"></div>
+    <button @click="onConfirmConsole">콘솔 확인</button>
+    <button @click="onSetContent">내용 넣기</button>
 </template>
 
 <script setup>
@@ -18,7 +16,7 @@ import { onMounted, ref } from 'vue';
     onMounted(() => {
         editorValid.value = new Editor({
             el: editor.value,
-            initialValue: 'initialValue',
+            initialValue: '<h1>initialValue</h1>',
             previewStyle: 'vertical',
             height: '500px',
             initialEditType: 'wysiwyg',

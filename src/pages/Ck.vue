@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <ckeditor :editor="editor" v-model="editorData" :config="editorConfig"></ckeditor>
-        <button @click="onConfirmConsole">콘솔 확인</button>
-        <button @click="onSetContent">내용 넣기</button>
-    </div>
+    <ckeditor :editor="editor" v-model="editorData" :config="editorConfig"></ckeditor>
+    <button @click="onConfirmConsole">콘솔 확인</button>
+    <button @click="onSetContent">내용 넣기</button>
 </template>
 
 <script setup>
@@ -12,7 +10,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import '@ckeditor/ckeditor5-build-classic/build/translations/ko';
 import UploadAdapter from '../assets/js/ckeditor/UploadAdapter';
 
-    const editorData = ref();
+    const editorData = ref('<h1>initialValue</h1>');
 
     const editor = ClassicEditor;
 

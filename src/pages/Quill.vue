@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <QuillEditor theme="snow" :toolbar="toolbarOptions" ref="editor" :modules="modules" />
-        <button @click="onConfirmConsole">콘솔 확인</button>
-        <button @click="onSetContent">내용 넣기</button>
-    </div>
+    <QuillEditor theme="snow" :toolbar="toolbarOptions" ref="editor" :modules="modules" />
+    <button @click="onConfirmConsole">콘솔 확인</button>
+    <button @click="onSetContent">내용 넣기</button>
 </template>
 
 <script setup>
